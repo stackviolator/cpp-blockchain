@@ -146,7 +146,7 @@ bool Blockchain::isChainValid() {
 
 int main() {
     // Start Blockchain
-    Blockchain NuggieCoin;
+    Blockchain testCoin;
 
     // Data for first added block
     TransactionData data1;
@@ -156,10 +156,10 @@ int main() {
     data1.sendKey    =   "Cael's balls";
     data1.timeStamp =   time(&data1Time);
 
-    NuggieCoin.addBlock(data1);
+    testCoin.addBlock(data1);
 
     cout << "Is chain valid?" << endl
-        << NuggieCoin.isChainValid() << endl;
+        << testCoin.isChainValid() << endl;
 
     // Second trans
     TransactionData data2;
@@ -170,13 +170,13 @@ int main() {
     data2.timeStamp =   time(&data1Time);
 
     cout << "Now is the chain valid?" << endl
-        << NuggieCoin.isChainValid() << endl;
+        << testCoin.isChainValid() << endl;
 
     // Someone is changing the mem vals
-    Block *hacker = NuggieCoin.getLatestBlock();
+    Block *hacker = testCoin.getLatestBlock();
     hacker->data.amount = 100;
     hacker->data.recvKey = "Josh";
 
     cout << "Now is the chain valid2 ?" << endl;
-    cout << NuggieCoin.isChainValid() << endl;
+    cout << testCoin.isChainValid() << endl;
 }
