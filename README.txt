@@ -1,0 +1,1 @@
+Basic blockchain made in c++, practice for me to learn how blockchains are built and get accustomed to c++ to be epic dev guy.
