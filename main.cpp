@@ -151,9 +151,9 @@ int main() {
     // Data for first added block
     TransactionData data1;
     time_t data1Time;
-    data1.amount    =   6.9;
+    data1.amount    =   8.9;
     data1.recvKey   =   "Josh";
-    data1.sendKey    =   "Cael's balls";
+    data1.sendKey    =   "Cael";
     data1.timeStamp =   time(&data1Time);
 
     testCoin.addBlock(data1);
@@ -164,9 +164,9 @@ int main() {
     // Second trans
     TransactionData data2;
     time_t data2Time;
-    data2.amount    =   4.20;
-    data2.recvKey   =   "Cael's balls";
-    data2.sendKey    =   "Aryaj's mouth";
+    data2.amount    =   4.0;
+    data2.recvKey   =   "Cael";
+    data2.sendKey    =   "Aryaj";
     data2.timeStamp =   time(&data1Time);
 
     cout << "Now is the chain valid?" << endl
